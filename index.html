@@ -3,6 +3,7 @@
 
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title> HOME
     </title>
@@ -12,6 +13,7 @@
             background-image: url(bb.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            animation: change 10s infinite ease-in-out;
         }
 
 
@@ -36,6 +38,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            text-shadow: 8px 8px 10px yellowgreen;
 
         }
 
@@ -52,8 +55,9 @@
         }
 
         .dropdown {
+            position: relative;
+
             float: right;
-            overflow: hidden;
         }
 
         .dropdown:hover {
@@ -66,19 +70,21 @@
             border: none;
             outline: none;
             color: white;
-            padding: 14px 16px;
+            padding: 20px 40px;
             background-color: inherit;
             font-family: inherit;
             margin: 0;
         }
 
-        .contents {
+        .dropdown .contents {
             display: none;
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 160px;
+            min-width: 180px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 5px 5px;
             z-index: 1;
+            text-align: center;
         }
 
         .contents a:hover {
@@ -90,7 +96,55 @@
             display: block;
 
         }
+
+        .footer {
+
+            width: 100%;
+            padding: 4px;
+
+        }
+
+
+
+        @keyframes change {
+            0% {
+
+                background-image: url(bb.jpg);
+            }
+
+            20% {
+
+                background-image: url(oks.png);
+
+            }
+
+            40% {
+
+                background-image: url(kaw\ na.jpg);
+            }
+
+            60% {
+
+                background-image: url(mata.jpg);
+            }
+
+            80% {
+
+                background-image: url(ey.png);
+            }
+
+            100% {
+
+                background-image: url(ito.jpg);
+            }
+
+
+
+
+
+        }
     </STYLE>
+
 
 </head>
 
@@ -131,6 +185,9 @@
         </header>
 
     </div>
+
+
+    
 
 
 

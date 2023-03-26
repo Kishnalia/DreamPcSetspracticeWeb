@@ -2,7 +2,8 @@
 <html lang="Eng">
 
 <head>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title> HOME
     </title>
     <STYLE>
@@ -11,6 +12,42 @@
             background-image: url(bb.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            animation: change 10s infinite ease-in-out;
+
+            mix-blend-mode: lighten;
+        }
+
+        @keyframes change {
+            0% {
+
+                background-image: url(bb.jpg);
+            }
+
+            20% {
+
+                background-image: url(oks.png);
+
+            }
+
+            40% {
+
+                background-image: url(kaw\ na.jpg);
+            }
+
+            60% {
+
+                background-image: url(mata.jpg);
+            }
+
+            80% {
+
+                background-image: url(ey.png);
+            }
+
+            100% {
+
+                background-image: url(ito.jpg);
+            }
         }
 
 
@@ -19,6 +56,7 @@
             margin: 0;
             padding: 0;
             background-color: black;
+
 
 
         }
@@ -35,6 +73,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            text-shadow: 8px 8px 10px yellowgreen;
 
         }
 
@@ -51,47 +90,12 @@
         }
 
 
-        div.Container {
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            margin: auto;
-            /* border: 1px solid #ccc; */
-            /* float: left; */
-            width: 300px;
 
-        }
-
-        div.Container img {
-            width: 100%;
-            height: auto;
-            border-radius: 50%;
-
-        }
-
-
-        div.desc {
-
-            background-color: black;
-            color: white;
-            padding: 18px;
-            text-align: center;
-            text-shadow: 8px 8px 8px yellow;
-
-        }
-
-        div.desc li {
-
-            color: white;
-            padding: 10%;
-            text-align: center;
-
-
-        }
 
         .dropdown {
+            position: relative;
+
             float: right;
-            overflow: hidden;
         }
 
         .dropdown:hover {
@@ -104,19 +108,21 @@
             border: none;
             outline: none;
             color: white;
-            padding: 14px 16px;
+            padding: 20px 40px;
             background-color: inherit;
             font-family: inherit;
             margin: 0;
         }
 
-        .contents {
+        .dropdown .contents {
             display: none;
             position: absolute;
             background-color: #f9f9f9;
-            min-width: 160px;
+            min-width: 180px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 5px 5px;
             z-index: 1;
+            text-align: center;
         }
 
         .contents a:hover {
@@ -128,12 +134,121 @@
             display: block;
 
         }
+
+        .contents {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+        }
+
+        .contents a:hover {
+            background-color: #ad9191;
+
+        }
+
+        .dropdown:hover .contents {
+            display: block;
+        }
+
+
+        div.container {
+            display: flex;
+
+
+
+
+        }
+
+        div.pic {
+            flex: 1;
+            align-self: center;
+            background-color: black;
+            border-radius: 50%;
+            padding: 20px 40px;
+            border-bottom-left-radius: 70%;
+            border-top-right-radius: 70%;
+
+
+
+
+        }
+
+        div.pic img {
+            display: block;
+            border-top-right-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 400px;
+            height: 500px;
+            box-shadow: 8px 10px 18px green;
+
+
+
+
+
+        }
+
+        div.desc {
+            flex: 1;
+            color: white;
+            text-align: center;
+            align-self: center;
+            background-color: black;
+            /* mix-blend-mode: multiply; */
+            font-size: 25px;
+            text-shadow: 8px 8px 10px yellowgreen;
+            border-bottom-left-radius: 70%;
+            border-top-right-radius: 70%;
+            mix-blend-mode: lighten;
+
+        }
+
+        .footer {
+
+            width: 100%;
+            padding: 4px;
+
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: rgb(7, 7, 7);
+            color: white;
+        }
+
+        .footer p {
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            text-shadow: 8px 8px 10px yellowgreen;
+        }
+
+        .footer li {
+            color: white;
+            display: inline-block;
+
+        }
+
+        .footer-icon {
+            text-align: center;
+        }
     </STYLE>
 
 </head>
 
 
 <body>
+
+
+
+
+
+
     <div class="nav">
         <header>
             <nav>
@@ -179,15 +294,28 @@
 
     <br>
     <br>
+    <div class="container">
 
 
-    <div class="Container">
-        <img src="profile.jpg" alt="profile">
+        <div class="pic">
+
+
+            <img src="profile.jpg" alt="profile">
+
+
+
+
+
+        </div>
+
+
+
         <div class="desc">
 
-            JOHN NERI B. ESCOBELLA
 
-            <p>MY NAME IS JOHN NERI B. ESCOBELLA AND I'M FROM BSIT-NS-3A. I AM THE ONE WHO CREATE THIS WEBSITE FOR YOU
+
+            <p>MY NAME IS JOHN NERI B. ESCOBELLA AND I'M FROM BSIT-NS-3A. I AM THE ONE WHO CREATE THIS WEBSITE FOR
+                YOU
                 TO GUIDE IN I.T WORLD.
             </p>
 
@@ -198,8 +326,31 @@
 
             </ul>
 
+
+
         </div>
+
+
+
+
+
+
+
     </div>
+    <footer class="footer">
+        <div class="footer-icon">
+            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </div>
+
+
+
+
+        <p><strong>copyright ©2023.designed by John Neri Escobella BSIT-NS-3A</strong></p>
+    </footer>
 
 
 
