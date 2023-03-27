@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <TITLE>My Dream Computer Specs</TITLE>
 
 
@@ -11,6 +12,9 @@
             background-image: url(bb.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+            animation: change 10s infinite ease-in-out;
+
+
         }
 
 
@@ -35,6 +39,7 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            text-shadow: 8px 8px 10px yellowgreen;
 
         }
 
@@ -126,9 +131,80 @@
 
         }
 
-        video {
+        .vid {
 
-            float: left;
+            padding: 30px 40px;
+
+
+        }
+
+        @keyframes change {
+            0% {
+
+                background-image: url(bb.jpg);
+            }
+
+            20% {
+
+                background-image: url(oks.png);
+
+            }
+
+            40% {
+
+                background-image: url(kaw\ na.jpg);
+            }
+
+            60% {
+
+                background-image: url(mata.jpg);
+            }
+
+            80% {
+
+                background-image: url(ey.png);
+            }
+
+            100% {
+
+                background-image: url(ito.jpg);
+            }
+        }
+
+        /* .vid vid {
+            display: flex;
+            
+        } */
+
+        .footer {
+
+            width: 100%;
+            padding: 4px;
+
+        }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: rgb(7, 7, 7);
+            color: white;
+        }
+
+        .footer p {
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            text-shadow: 8px 8px 10px yellowgreen;
+        }
+
+        .footer li {
+            color: white;
+            display: inline-block;
+
+        }
+
+        .footer-icon {
+            text-align: center;
         }
     </style>
 
@@ -254,13 +330,29 @@
         </div>
     </div>
 
+    <div class="vid">
 
-    <video width="400" height="240" controls>
-        <source src="escobellavid1.mp4" type="video/mp4">
+        <video width="800" height="500" controls>
+            <source src="escobellavid1.mp4" type="video/mp4">
 
-    </video>
+        </video>
+
+    </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-icon">
+            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </div>
 
 
+
+
+        <p><strong>copyright ©2023.designed by John Neri Escobella BSIT-NS-3A</strong></p>
+    </footer>
 
 
 </body>
