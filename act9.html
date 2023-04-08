@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="Eng">
-
+<html lang="en">
 
 <head>
-
-    <title> HOME
-    </title>
-    <STYLE>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
         body {
 
             background-image: url(bb.jpg);
@@ -20,12 +20,13 @@
             margin: 0;
             padding: 0;
             background-color: black;
+            text-shadow: 8px 8px 8px yellow;
 
 
         }
 
         div.nav li {
-
+            text-shadow: 8px 8px 8px yellow;
             float: right;
 
         }
@@ -103,30 +104,68 @@
 
         }
 
-        p {
-            font-size: 28px;
-            text-align: center;
-            text-shadow: 8px 8px 8px yellow;
-
-        }
-
         h1 {
             text-shadow: 8px 8px 8px yellow;
         }
 
-        img,
-        iframe {
 
+        .mainCon {
             display: flex;
+            border: white solid;
+            justify-content: center;
+            /* center horizontally */
+            align-items: center;
+            width: 100%;
+            flex-wrap: wrap;
 
-            margin: auto;
+
+
         }
-    </STYLE>
+
+        .con {
+            border: solid white;
+        }
+
+        .item1 {
+            flex: 1;
+
+            text-align: CENTER;
+            text-shadow: 8px 8px 8px yellow;
+            color: white;
+            padding: 20px 40px;
+        }
+
+        .item2 {
+            flex: 1;
+            color: white;
+            text-align: center;
+        }
+
+        .item3 {
+            flex: 1;
+            color: white;
+            text-align: center;
+        }
+
+        .conTitle {
+            display: flex;
+            border: white solid;
+            width: 100%;
+            /* text-align: center; */
+            /* align-items: center; */
+            justify-content: center;
+            color: white;
+
+        }
+    </style>
+
+
+
 
 </head>
 
-
 <body>
+
     <div class="nav">
         <header>
             <nav>
@@ -137,6 +176,7 @@
 
                     <li><a href="contact.html">CONTACT ME</a></li>
                     <li><a href="index.html">HOME</a></li>
+
                 </ul>
 
                 <div class="dropdown">
@@ -148,46 +188,92 @@
                         </button>
                         <div class="contents">
                             <a href="pcsetup.html">MY PC SET UPS</a>
-                            <a href="act2.html">NUMBER SYSTEM</a>
                             <a href="act3.html">DATA FORMATS</a>
                             <a href="act4.html">OPERATING SYSTEM</a>
+                            <a href="act5.html">Mobile and Games</a>
                             <a href="act6.html">STORAGE PLATFORM</a>
                             <a href="act7.html">DATABASE PLATFORM</a>
                             <a href="act8.html">APPLICATION PLATFORM</a>
+                            <a href="act10.html"></a>
+                            <a href="act11.html"></a>
+                            <a href="act12.html"></a>
                         </div>
                     </div>
                 </div>
 
 
             </nav>
+
         </header>
 
     </div>
-    <br>
-    <br>
-    <br>
-    <h1 style="color:white">Mobile and Games</h1>
-    <p style="color:white">A modern technology platform typically includes analytics, database and data management,
-        tools for application development and extension, integration, and intelligent technologies such as artificial
-        intelligence (AI), machine learning, and the Internet of Things (IoT).</p>
 
-    <img src="OS.jpg" alt="numbers" width="700" height="350">
+    <br>
     <br>
     <br>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/GIFL7CajDJE" title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
 
-    <video width="400" height="240" controls>
-        <source src="mobile.mp4" type="video/mp4">
 
-    </video>
+    <div class="conTitle">
+        <h1>The Web Platforms</h1>
+    </div>
+    <div class="mainCon">
+
+
+
+        <div class="con item1">
+
+            <h1>WHAT IS A WEB PLATFORM?</h1>
+            <p>
+                Web application servers are software frameworks that provide an environment for running web
+                applications. They
+                typically
+                handle tasks such as managing application logic, session management, and database access. Examples of
+                web
+                application
+                servers include Apache Tomcat, JBoss, and IBM WebSphere.
+            </p>
+
+
+        </div>
+
+        <div class="con item2">
+
+            <h1>WE WILL LEARNED ABOUT WEB PLATFORM</h1>
+            <img src="owp.png" style=" height:250px; width:500px;">
+
+
+        </div>
+
+        <div class="con item3">
+
+            <h1>THE INTRODUCTION TO WEB PLATFORM</h1>
+            <iframe width="500" height="250" src="https://www.youtube.com/embed/tXRongnl3zs"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
-
-
-
 
 </html>
