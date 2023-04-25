@@ -1,35 +1,27 @@
 <!DOCTYPE html>
-<html lang="Eng">
-
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <title> HOME
-    </title>
-    <STYLE>
+    <style>
         body {
-
             background-image: url(bb.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             animation: change 10s infinite ease-in-out;
         }
 
-
         div.nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             background-color: black;
-
-
         }
 
         div.nav li {
-
             float: right;
-
         }
 
         div.nav li a {
@@ -39,29 +31,22 @@
             padding: 14px 16px;
             text-decoration: none;
             text-shadow: 8px 8px 10px yellowgreen;
-
         }
 
         div.nav li.logo {
-
             float: left;
-
         }
-
 
         div.nav li a:hover {
             background-color: blue;
-
         }
 
         .dropdown {
             position: relative;
-
             float: right;
         }
 
         .dropdown:hover {
-
             background-color: blue;
         }
 
@@ -86,73 +71,98 @@
             z-index: 1;
             text-align: center;
             text-decoration: none;
-
         }
 
         .dropdown .contents a {
             list-style-type: none;
-
             text-decoration: none;
         }
 
         .contents a:hover {
             background-color: #ad9191;
             display: block;
-
         }
 
         .dropdown:hover .contents {
             display: block;
-
         }
 
         .footer {
-
             width: 100%;
             padding: 4px;
-
         }
-
-
 
         @keyframes change {
             0% {
-
                 background-image: url(bb.jpg);
             }
 
             20% {
-
                 background-image: url(oks.png);
-
             }
 
             40% {
-
                 background-image: url(kaw\ na.jpg);
             }
 
             60% {
-
                 background-image: url(mata.jpg);
             }
 
             80% {
-
                 background-image: url(ey.png);
             }
 
             100% {
-
                 background-image: url(ito.jpg);
             }
-
-
-
-
-
         }
-    </STYLE>
+
+        @media screen and (max-width: 600px) {
+            body {
+                background-size: auto;
+            }
+
+            div.nav ul {
+                display: flex;
+                flex-direction: column;
+                background-color: black;
+            }
+
+            div.nav li {
+                float: none;
+            }
+
+            div.nav li.logo {
+                float: none;
+                text-align: center;
+            }
+
+            div.nav li a {
+                display: inline-block;
+                text-align: center;
+            }
+
+            .dropdown {
+                display: inline-block;
+                float: none;
+            }
+
+            .dropdown .dropdown-btn {
+                padding: 10px 20px;
+            }
+
+            .dropdown .contents {
+                position: static;
+                display: none;
+            }
+
+            .dropdown:hover .contents {
+                display: none;
+            }
+        }
+    </style>
+
 
 
 </head>
@@ -160,26 +170,18 @@
 
 <body>
 
-    
     <div class="nav">
         <header>
             <nav>
-
-
                 <ul>
                     <li class="logo"><a href="index.html">MY PERSONAL COMPUTER</a></li>
-
                     <li><a href="contact.html">CONTACT ME</a></li>
                     <li><a href="index.html">HOME</a></li>
                 </ul>
 
                 <div class="dropdown">
                     <div>
-                        <button class="dropdown-btn">
-
-                            CONTENTS
-
-                        </button>
+                        <button class="dropdown-btn">CONTENTS</button>
                         <div class="contents">
                             <a href="pcsetup.html">MY PC SET UPS</a>
                             <a href="act2.html">NUMBER SYSTEM</a>
@@ -195,30 +197,14 @@
                             <a href="act12.html">ARTIFICIAL INTEL.</a>
                             <a href="act13.html">MEDIA PLATFORMS</a>
                             <a href="act14.html">Internet of Things</a>
-
-
                         </div>
                     </div>
                 </div>
 
-
             </nav>
         </header>
-
-        <!-- </div>
-    <div class="search"><input type="text" placeholder="Search..">
-    </div> -->
-
-
-
-
+    </div>
 
 </body>
-
-
-
-
-
-
 
 </html>
