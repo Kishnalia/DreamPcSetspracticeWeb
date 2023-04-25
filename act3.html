@@ -1,125 +1,170 @@
 <!DOCTYPE html>
-<html lang="Eng">
-
+<html lang="en">
 
 <head>
-
-    <title> HOME
-    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <STYLE>
+        /* CSS for small screens */
+        @media only screen and (max-width: 600px) {
+
+            /* Adjust nav menu */
+            div.nav li {
+                float: none;
+                text-align: center;
+            }
+
+            /* Adjust video size */
+            iframe,
+            video {
+                width: 100%;
+            }
+        }
+
+        /* CSS for medium and large screens */
+        @media only screen and (min-width: 601px) {
+
+            /* Adjust nav menu */
+            div.nav ul {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            div.nav li {
+                float: none;
+            }
+
+            /* Adjust content layout */
+            body {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "header header"
+                    "sidebar main";
+            }
+
+            h1,
+            p {
+                grid-column: 2 / 3;
+            }
+
+            img,
+            iframe,
+            video {
+                max-width: 100%;
+            }
+
+            /* Define grid areas */
+            header {
+                grid-area: header;
+            }
+
+            .nav {
+                grid-column: 2 / 3;
+            }
+
+            aside {
+                grid-area: sidebar;
+            }
+
+            main {
+                grid-area: main;
+            }
+        }
+
+        /* Use relative units for font sizes */
         body {
-
-            background-image: url(bb.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-
-        div.nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            background-color: black;
-
-
-        }
-
-        div.nav li {
-
-            float: right;
-
-        }
-
-        div.nav li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-
-        }
-
-        div.nav li.logo {
-
-            float: left;
-
-        }
-
-
-        div.nav li a:hover {
-            background-color: blue;
-
-        }
-
-        .dropdown {
-            position: relative;
-
-            float: right;
-        }
-
-        .dropdown:hover {
-
-            background-color: blue;
-        }
-
-        .dropdown .dropdown-btn {
             font-size: 16px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 20px 40px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-        }
-
-        .dropdown .contents {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 180px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            padding: 5px 5px;
-            z-index: 1;
-            text-align: center;
-            text-decoration: none;
-
-        }
-
-        .dropdown .contents a {
-            list-style-type: none;
-
-            text-decoration: none;
-        }
-
-        .contents a:hover {
-            background-color: #ad9191;
-            display: block;
-
-        }
-
-        .dropdown:hover .contents {
-            display: block;
-
-        }
-
-        p {
-            font-size: 28px;
-            text-align: center;
-            text-shadow: 8px 8px 8px yellow;
-
         }
 
         h1 {
-            text-shadow: 8px 8px 8px yellow;
+            font-size: 2em;
         }
 
-        img,
-        iframe {
+        p {
+            font-size: 1.5em;
+        }
 
+        /* Use flexible units for container sizes */
+        header,
+        .nav,
+        aside,
+        main {
+            padding: 1em;
+        }
+
+        /* Use flexbox for nav menu */
+        div.nav ul {
             display: flex;
+            justify-content: flex-end;
+        }
 
-            margin: auto;
+        div.nav li {
+            margin: 0 0.5em;
+        }
+
+        /* Use flexbox for dropdown menu */
+        .dropdown {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            display: none;
+            min-width: 160px;
+            padding: 10px 0;
+            background-color: black;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dropdown-menu a {
+            padding: 10px 20px;
+            text-shadow: 0px 0px 0px;
+        }
+
+        /* Use flexbox for content layout */
+        aside {
+            display: flex;
+            flex-direction: column;
+        }
+
+        aside h2 {
+            margin-top: 0;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+            margin: 1em 0;
+        }
+
+        aside li {
+            margin-bottom: 0.5em;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main h1 {
+            margin-top: 0;
+        }
+
+        main img {
+            margin: 1em 0;
         }
     </STYLE>
 
@@ -140,32 +185,25 @@
                 </ul>
 
                 <div class="dropdown">
-                    <div>
-                        <button class="dropdown-btn">
+                    <button class="dropdown-btn">CONTENTS <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="pcsetup.html">MY PC SET UPS</a>
+                        <a href="act2.html">NUMBER SYSTEM</a>
 
-                            CONTENTS
-
-                        </button>
-                        <div class="contents">
-                            <a href="pcsetup.html">MY PC SET UPS</a>
-                            <a href="act2.html">NUMBER SYSTEM</a>
-
-                            <a href="act4.html">OPERATING SYSTEM</a>
-                            <a href="act5.html">Mobile and Games</a>
-                            <a href="act6.html">STORAGE PLATFORM</a>
-                            <a href="act7.html">DATABASE PLATFORM</a>
-                            <a href="act8.html">APPLICATION PLATFORM</a>
-                            <a href="act9.html">WEB PLATFORMS</a>
-                            <a href="act10.html">CONTENT MANAGEMENT SYSTEM</a>
-                            <a href="act11.html">(OS) OPERATING SYSTEMS</a>
-                            <a href="act12.html">ARTIFICIAL INTEL.</a>
-                            <a href="act13.html">MEDIA PLATFORMS</a>
-                            <a href="act14.html">INTERNET OF THINGS</a>
-                            <a href="act15.html">SECURITY</a>
-                        </div>
+                        <a href="act4.html">OPERATING SYSTEM</a>
+                        <a href="act5.html">Mobile and Games</a>
+                        <a href="act6.html">STORAGE PLATFORM</a>
+                        <a href="act7.html">DATABASE PLATFORM</a>
+                        <a href="act8.html">APPLICATION PLATFORM</a>
+                        <a href="act9.html">WEB PLATFORMS</a>
+                        <a href="act10.html">CONTENT MANAGEMENT SYSTEM</a>
+                        <a href="act11.html">(OS) OPERATING SYSTEMS</a>
+                        <a href="act12.html">ARTIFICIAL INTEL.</a>
+                        <a href="act13.html">MEDIA PLATFORMS</a>
+                        <a href="act14.html">Internet of Things</a>
+                        <a href="act15.html">SECURITY</a>
                     </div>
                 </div>
-
 
             </nav>
         </header>
@@ -186,7 +224,7 @@
     <br>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/A37-3lflh8I" title="YouTube video player"
-        frameborder="0"
+        style="border:0;"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
 

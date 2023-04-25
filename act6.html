@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="Eng">
-
+<html lang="en">
 
 <head>
-
-    <title> HOME
-    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <STYLE>
         body {
 
@@ -53,54 +53,52 @@
 
         .dropdown {
             position: relative;
-
             float: right;
+            margin-top: 14px;
         }
 
-        .dropdown:hover {
 
-            background-color: blue;
-        }
-
-        .dropdown .dropdown-btn {
+        .dropdown-btn {
+            display: inline-block;
+            color: white;
             font-size: 16px;
             border: none;
             outline: none;
-            color: white;
-            padding: 20px 40px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
+            background-color: transparent;
+            cursor: pointer;
         }
 
-        .dropdown .contents {
-            display: none;
+        .dropdown-btn:hover {
+            color: blue;
+        }
+
+        .dropdown-menu {
             position: absolute;
-            background-color: #f9f9f9;
-            min-width: 180px;
+            top: 100%;
+            right: 0;
+            display: none;
+            min-width: 160px;
+            padding: 10px 0;
+            background-color: black;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            padding: 5px 5px;
             z-index: 1;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            color: white;
             text-align: center;
+            padding: 10px 20px;
             text-decoration: none;
-
+            text-shadow: 8px 8px 10px yellowgreen;
         }
 
-        .dropdown .contents a {
-            list-style-type: none;
-
-            text-decoration: none;
+        .dropdown-menu a:hover {
+            background-color: blue;
         }
 
-        .contents a:hover {
-            background-color: #ad9191;
+        .dropdown:hover .dropdown-menu {
             display: block;
-
-        }
-
-        .dropdown:hover .contents {
-            display: block;
-
         }
 
         p {
@@ -140,32 +138,26 @@
                 </ul>
 
                 <div class="dropdown">
-                    <div>
-                        <button class="dropdown-btn">
-
-                            CONTENTS
-
-                        </button>
-                        <div class="contents">
-                            <a href="pcsetup.html">MY PC SET UPS</a>
-                            <a href="act2.html">NUMBER SYSTEM</a>
-                            <a href="act3.html">DATA FORMATS</a>
-                            <a href="act4.html">OPERATING SYSTEM</a>
-                            <a href="act5.html">Mobile and Games</a>
-
-                            <a href="act7.html">DATABASE PLATFORM</a>
-                            <a href="act8.html">APPLICATION PLATFORM</a>
-                            <a href="act9.html">WEB PLATFORMS</a>
-                            <a href="act10.html">CONTENT MANAGEMENT SYSTEM</a>
-                            <a href="act11.html">(OS) OPERATING SYSTEMS</a>
-                            <a href="act12.html">ARTIFICIAL INTEL.</a>
-                            <a href="act13.html">MEDIA PLATFORMS</a>
-                            <a href="act14.html">Internet of Things</a>
-                            <a href="act15.html">SECURITY</a>
-
-                        </div>
+                    <button class="dropdown-btn">CONTENTS <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="pcsetup.html">MY PC SET UPS</a>
+                        <a href="act2.html">NUMBER SYSTEM</a>
+                        <a href="act3.html">DATA FORMATS</a>
+                        <a href="act4.html">OPERATING SYSTEM</a>
+                        <a href="act5.html">Mobile and Games</a>
+                        
+                        <a href="act7.html">DATABASE PLATFORM</a>
+                        <a href="act8.html">APPLICATION PLATFORM</a>
+                        <a href="act9.html">WEB PLATFORMS</a>
+                        <a href="act10.html">CONTENT MANAGEMENT SYSTEM</a>
+                        <a href="act11.html">(OS) OPERATING SYSTEMS</a>
+                        <a href="act12.html">ARTIFICIAL INTEL.</a>
+                        <a href="act13.html">MEDIA PLATFORMS</a>
+                        <a href="act14.html">Internet of Things</a>
+                        <a href="act15.html">SECURITY</a>
                     </div>
                 </div>
+
 
 
             </nav>
@@ -184,8 +176,8 @@
     <br>
     <br>
 
+    <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Lf1PnyCXsCo" title="YouTube video player"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
 
@@ -195,8 +187,5 @@
     </video>
 
 </body>
-
-
-
 
 </html>

@@ -1,52 +1,47 @@
 <!DOCTYPE html>
-<html lang="Eng">
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title> HOME
-    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <STYLE>
         body {
-
-            background-image: url(bb.jpg);
+            background-color: black;
             background-repeat: no-repeat;
             background-size: cover;
-            animation: change 10s infinite ease-in-out;
-            mix-blend-mode: lighten;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #e21c1c;
         }
 
-        @keyframes change {
-            0% {
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-                background-image: url(bb.jpg);
-            }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+        }
 
-            20% {
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
 
-                background-image: url(mata.jpg);
-
-            }
-
-            40% {
-
-                background-image: url(kaw\ na.jpg);
-            }
-
-            60% {
-
-                background-image: url(oks.png);
-            }
-
-            80% {
-
-                background-image: url(mata.jpg);
-            }
-
-            100% {
-
-                background-image: url(ito.jpg);
-            }
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
         }
 
 
@@ -89,76 +84,53 @@
         }
 
 
-
-
         .dropdown {
             position: relative;
-
             float: right;
+            margin-top: 4px;
         }
 
-        .dropdown:hover {
 
-            background-color: blue;
-        }
-
-        .dropdown .dropdown-btn {
+        .dropdown-btn {
+            display: inline-block;
+            color: white;
             font-size: 16px;
             border: none;
             outline: none;
-            color: white;
-            padding: 20px 40px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
+            background-color: transparent;
+            cursor: pointer;
         }
 
-        .dropdown .contents {
-            display: none;
+        .dropdown-btn:hover {
+            color: blue;
+        }
+
+        .dropdown-menu {
             position: absolute;
-            background-color: #f9f9f9;
-            min-width: 180px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            padding: 5px 5px;
-            z-index: 1;
-            text-align: center;
-            text-decoration: none;
-
-        }
-
-        .dropdown .contents a {
-            list-style-type: none;
-
-            text-decoration: none;
-        }
-
-        .contents a:hover {
-            background-color: #ad9191;
-            display: block;
-
-        }
-
-        .dropdown:hover .contents {
-            display: block;
-
-        }
-
-        .contents {
+            top: 100%;
+            right: 0;
             display: none;
-            position: absolute;
-            background-color: #f9f9f9;
             min-width: 160px;
+            padding: 10px 0;
+            background-color: black;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
-
         }
 
-        .contents a:hover {
-            background-color: #ad9191;
-
+        .dropdown-menu a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-shadow: 8px 8px 10px yellowgreen;
         }
 
-        .dropdown:hover .contents {
+        .dropdown-menu a:hover {
+            background-color: blue;
+        }
+
+        .dropdown:hover .dropdown-menu {
             display: block;
         }
 
@@ -174,7 +146,7 @@
         div.pic {
             flex: 1;
             align-self: center;
-            background-color: black;
+            background-color: rgb(234, 11, 11);
             border-radius: 50%;
             padding: 20px 40px;
             border-bottom-left-radius: 70%;
@@ -245,6 +217,79 @@
         .footer-icon {
             text-align: center;
         }
+
+        @media (max-width: 768px) {
+            body {
+                background-size: contain;
+            }
+
+            div.pic {
+                flex: 1;
+                border-radius: 0;
+                padding: 0;
+            }
+
+            div.pic img {
+                width: 100%;
+                height: auto;
+            }
+
+            div.desc {
+                border-radius: 0;
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            div.nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            div.nav li {
+                float: none;
+                margin-bottom: 10px;
+            }
+
+            div.nav li.logo {
+                float: none;
+                margin-bottom: 20px;
+            }
+
+            div.nav li a {
+                padding: 10px 16px;
+            }
+
+            .dropdown .dropdown-btn {
+                padding: 10px 20px;
+            }
+
+            div.container {
+                flex-direction: column;
+            }
+
+            div.pic {
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            div.desc {
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 0;
+                font-size: 18px;
+            }
+
+            .footer {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .footer li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
     </STYLE>
 
 </head>
@@ -270,28 +315,23 @@
                 </ul>
 
                 <div class="dropdown">
-                    <div>
-                        <button class="dropdown-btn">
-
-                            CONTENTS
-
-                        </button>
-                        <div class="contents">
-                            <a href="pcsetup.html">MY PC SET UPS</a>
-                            <a href="act2.html">NUMBER SYSTEM</a>
-                            <a href="act3.html">DATA FORMATS</a>
-                            <a href="act4.html">OPERATING SYSTEM</a>
-                            <a href="act5.html">Mobile and Games</a>
-                            <a href="act6.html">STORAGE PLATFORM</a>
-                            <a href="act7.html">DATABASE PLATFORM</a>
-                            <a href="act8.html">APPLICATION PLATFORM</a>
-                            <a href="act9.html">WEB PLATFORMS</a>
-                            <a href="act10.html">CONTENT MANAGEMENT SYSTEM</a>
-                            <a href="act11.html">(OS) OPERATING SYSTEMS</a>
-                            <a href="act12.html">ARTIFICIAL INTEL.</a>
-                            <a href="act13.html">MEDIA PLATFORMS</a>
-                            <a href="act14.html">Internet of Things</a>
-                        </div>
+                    <button class="dropdown-btn">CONTENTS <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="pcsetup.html">MY PC SET UPS</a>
+                        <a href="act2.html">NUMBER SYSTEM</a>
+                        <a href="act3.html">DATA FORMATS</a>
+                        <a href="act4.html">OPERATING SYSTEM</a>
+                        <a href="act5.html">Mobile and Games</a>
+                        <a href="act6.html">STORAGE PLATFORM</a>
+                        <a href="act7.html">DATABASE PLATFORM</a>
+                        <a href="act8.html">APPLICATION PLATFORM</a>
+                        <a href="act9.html">WEB PLATFORMS</a>
+                        <a href="act10.html">CONTENT MANAGEMENT SYSTEM</a>
+                        <a href="act11.html">(OS) OPERATING SYSTEMS</a>
+                        <a href="act12.html">ARTIFICIAL INTEL.</a>
+                        <a href="act13.html">MEDIA PLATFORMS</a>
+                        <a href="act14.html">Internet of Things</a>
+                        <a href="act15.html">SECURITY</a>
                     </div>
                 </div>
 
@@ -354,14 +394,16 @@
 
     </div>
     <span></span>
-    <hr style=" margin-top: 100x;">
+    <hr style=" margin-top: 100px;">
     <footer class="footer">
         <div class="footer-icon">
-            <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
         </div>
 
 

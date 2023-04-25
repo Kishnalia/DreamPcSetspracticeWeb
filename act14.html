@@ -55,54 +55,52 @@
 
         .dropdown {
             position: relative;
-
             float: right;
+            margin-top: 14px;
         }
 
-        .dropdown:hover {
 
-            background-color: blue;
-        }
-
-        .dropdown .dropdown-btn {
+        .dropdown-btn {
+            display: inline-block;
+            color: white;
             font-size: 16px;
             border: none;
             outline: none;
-            color: white;
-            padding: 20px 40px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
+            background-color: transparent;
+            cursor: pointer;
         }
 
-        .dropdown .contents {
-            display: none;
+        .dropdown-btn:hover {
+            color: blue;
+        }
+
+        .dropdown-menu {
             position: absolute;
-            background-color: #f9f9f9;
-            min-width: 180px;
+            top: 100%;
+            right: 0;
+            display: none;
+            min-width: 160px;
+            padding: 10px 0;
+            background-color: black;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            padding: 5px 5px;
             z-index: 1;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            color: white;
             text-align: center;
+            padding: 10px 20px;
             text-decoration: none;
-
+            text-shadow: 8px 8px 10px yellowgreen;
         }
 
-        .dropdown .contents a {
-            list-style-type: none;
-
-            text-decoration: none;
+        .dropdown-menu a:hover {
+            background-color: blue;
         }
 
-        .contents a:hover {
-            background-color: #ad9191;
+        .dropdown:hover .dropdown-menu {
             display: block;
-
-        }
-
-        .dropdown:hover .contents {
-            display: block;
-
         }
 
         h1 {
@@ -209,30 +207,23 @@
                 </ul>
 
                 <div class="dropdown">
-                    <div>
-                        <button class="dropdown-btn">
-
-                            CONTENTS
-
-                        </button>
-                        <div class="contents">
-                            <a href="pcsetup.html">MY PC SET UPS</a>
-                            <a href="act2.html">NUMBER SYSTEM</a>
-                            <a href="act3.html">DATA FORMATS</a>
-                            <a href="act4.html">OPERATING SYSTEM</a>
-                            <a href="act5.html">Mobile and Games</a>
-                            <a href="act6.html">STORAGE PLATFORM</a>
-                            <a href="act7.html">DATABASE PLATFORM</a>
-                            <a href="act8.html">APPLICATION PLATFORM</a>
-                            <a href="act9.html">WEB PLATFORMS</a>
-                            <a href="act10.html">CONTENT MANAGEMENT SYSTEM</a>
-                            <a href="act11.html">(OS) OPERATING SYSTEMS</a>
-                            <a href="act12.html">ARTIFICIAL INTEL.</a>
-                            <a href="act13.html">MEDIA PLATFORMS</a>
-                            <a href="act15.html">SECURITY</a>
-                            
-
-                        </div>
+                    <button class="dropdown-btn">CONTENTS <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="pcsetup.html">MY PC SET UPS</a>
+                        <a href="act2.html">NUMBER SYSTEM</a>
+                        <a href="act3.html">DATA FORMATS</a>
+                        <a href="act4.html">OPERATING SYSTEM</a>
+                        <a href="act5.html">Mobile and Games</a>
+                        <a href="act6.html">STORAGE PLATFORM</a>
+                        <a href="act7.html">DATABASE PLATFORM</a>
+                        <a href="act8.html">APPLICATION PLATFORM</a>
+                        <a href="act9.html">WEB PLATFORMS</a>
+                        <a href="act10.html">CONTENT MANAGEMENT SYSTEM</a>
+                        <a href="act11.html">(OS) OPERATING SYSTEMS</a>
+                        <a href="act12.html">ARTIFICIAL INTEL.</a>
+                        <a href="act13.html">MEDIA PLATFORMS</a>
+                        
+                        <a href="act15.html">SECURITY</a>
                     </div>
                 </div>
 
@@ -269,7 +260,7 @@
         <div class="con item2">
 
             <h1>WE WILL LEARNED ABOUT IoT</h1>
-            <img src="iot.jpg" style=" height:250px; width:500px; padding:20px ">
+            <img src="iot.jpg" alt="" style=" height:250px; width:500px; padding:20px ">
 
 
         </div>
@@ -278,9 +269,9 @@
 
             <h1>THE INTERNET OF THINGS</h1>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/6mBO2vqLv38"
-                title="YouTube video player" frameborder="0"
+                title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
+                allowfullscreen style="border: 1px solid black;"></iframe>
 
 
         </div>

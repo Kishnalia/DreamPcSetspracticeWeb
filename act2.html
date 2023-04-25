@@ -1,113 +1,101 @@
 <!DOCTYPE html>
-<html lang="Eng">
-
+<html lang="en">
 
 <head>
-
-    <title> HOME
-    </title>
-    <STYLE>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
         body {
-
-            background-image: url(bb.jpg);
+            background-image: url("bb.jpg");
             background-repeat: no-repeat;
             background-size: cover;
         }
 
-
-        div.nav ul {
+        .nav {
+            background-color: black;
             list-style-type: none;
             margin: 0;
             padding: 0;
-            background-color: black;
-
-
+            overflow: hidden;
         }
 
-        div.nav li {
-
+        .nav li {
             float: right;
-
         }
 
-        div.nav li a {
+        .nav li a {
             display: block;
             color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-
         }
 
-        div.nav li.logo {
-
+        .nav li.logo {
             float: left;
-
         }
 
-
-        div.nav li a:hover {
+        .nav li a:hover {
             background-color: blue;
-
         }
 
         .dropdown {
             position: relative;
-
             float: right;
+            margin-top: 14px;
         }
 
-        .dropdown:hover {
 
-            background-color: blue;
-        }
-
-        .dropdown .dropdown-btn {
+        .dropdown-btn {
+            display: inline-block;
+            color: white;
             font-size: 16px;
             border: none;
             outline: none;
-            color: white;
-            padding: 20px 40px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
+            background-color: transparent;
+            cursor: pointer;
         }
 
-        .dropdown .contents {
-            display: none;
+        .dropdown-btn:hover {
+            color: blue;
+        }
+
+        .dropdown-menu {
             position: absolute;
-            background-color: #f9f9f9;
-            min-width: 180px;
+            top: 100%;
+            right: 0;
+            display: none;
+            min-width: 160px;
+            padding: 10px 0;
+            background-color: black;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            padding: 5px 5px;
             z-index: 1;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            color: white;
             text-align: center;
+            padding: 10px 20px;
             text-decoration: none;
-
+            text-shadow: 8px 8px 10px yellowgreen;
         }
 
-        .dropdown .contents a {
-            list-style-type: none;
-
-            text-decoration: none;
+        .dropdown-menu a:hover {
+            background-color: blue;
         }
 
-        .contents a:hover {
-            background-color: #ad9191;
+        .dropdown:hover .dropdown-menu {
             display: block;
-
-        }
-
-        .dropdown:hover .contents {
-            display: block;
-
         }
 
         p {
             font-size: 28px;
             text-align: center;
             text-shadow: 8px 8px 8px yellow;
-
         }
 
         h1 {
@@ -116,13 +104,10 @@
 
         img,
         iframe {
-
-            display: flex;
-
+            display: block;
             margin: auto;
         }
-    </STYLE>
-
+    </style>
 </head>
 
 
@@ -130,90 +115,58 @@
     <div class="nav">
         <header>
             <nav>
-
-
                 <ul>
                     <li class="logo"><a href="index.html">MY PERSONAL COMPUTER</a></li>
-
                     <li><a href="contact.html">CONTACT ME</a></li>
                     <li><a href="index.html">HOME</a></li>
                 </ul>
 
                 <div class="dropdown">
-                    <div>
-                        <button class="dropdown-btn">
-
-                            CONTENTS
-
-                        </button>
-                        <div class="contents">
-                            <a href="pcsetup.html">MY PC SET UPS</a>
-                            <hr>
-                            <a href="act3.html">DATA FORMATS</a>
-                            <hr>
-                            <a href="act4.html">OPERATING SYSTEM</a>
-                            <hr>
-                            <a href="act5.html">Mobile and Games</a>
-                            <hr>
-                            <a href="act6.html">STORAGE PLATFORM</a>
-                            <hr>
-                            <a href="act7.html">DATABASE PLATFORM</a>
-                            <hr>
-                            <a href="act8.html">APPLICATION PLATFORM</a>
-                            <hr>
-                            <a href="act9.html">WEB PLATFORMS</a>
-                            <hr>
-                            <a href="act10.html">CONTENT MANAGEMENT SYSTEM</a>
-                            <hr>
-                            <a href="act11.html">(OS) OPERATING SYSTEMS</a>
-                            <hr>
-                            <a href="act12.html">ARTIFICIAL INTEL.</a>
-                            <a href="act13.html">MEDIA PLATFORMS</a>
-                            <a href="act14.html">Internet of Things</a>
-                            <a href="act15.html">SECURITY</a>
-
-                        </div>
+                    <button class="dropdown-btn">CONTENTS <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-menu">
+                        <a href="pcsetup.html">MY PC SET UPS</a>
+                       
+                        <a href="act3.html">DATA FORMATS</a>
+                        <a href="act4.html">OPERATING SYSTEM</a>
+                        <a href="act5.html">Mobile and Games</a>
+                        <a href="act6.html">STORAGE PLATFORM</a>
+                        <a href="act7.html">DATABASE PLATFORM</a>
+                        <a href="act8.html">APPLICATION PLATFORM</a>
+                        <a href="act9.html">WEB PLATFORMS</a>
+                        <a href="act10.html">CONTENT MANAGEMENT SYSTEM</a>
+                        <a href="act11.html">(OS) OPERATING SYSTEMS</a>
+                        <a href="act12.html">ARTIFICIAL INTEL.</a>
+                        <a href="act13.html">MEDIA PLATFORMS</a>
+                        <a href="act14.html">Internet of Things</a>
+                        <a href="act15.html">SECURITY</a>
                     </div>
                 </div>
-
-
             </nav>
         </header>
-
     </div>
+
     <br>
     <br>
     <br>
     <h1 style="color:white">NUMBER SYSTEM</h1>
-    <p style="color:white">A number system is defined as a system of writing to express numbers. It is
-        the mathematical
-        notation for
-        representing
-        numbers of a given set by using digits or other symbols in a consistent manner. It provides a unique
-        representation of
-        every number and represents the arithmetic and algebraic structure of the figures.</p>
+    <p style="color:white">A number system is defined as a system of writing to express numbers. It is the mathematical
+        notation for representing numbers of a given set by using digits or other symbols in a consistent manner. It
+        provides a unique representation of every number and represents the arithmetic and algebraic structure of the
+        figures.</p>
 
-    <img src="number-systems.png" alt="numbers" width="700" height="350">
+    <img src="number-systems.png" alt="numbers illustration" width="700" height="350">
     <br>
     <br>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/crSGS1uBSNQ" title="YouTube video player"
-        frameborder="0"
+        style="border:0;"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
+
     <video width="400" height="240" controls>
         <source src="number.mp4" type="video/mp4">
-
+        Your browser does not support the video tag.
     </video>
-
-
-
 </body>
-
-
-
-
-
-
 
 </html>
